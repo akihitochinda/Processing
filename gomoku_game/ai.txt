@@ -1,0 +1,31 @@
+Did you attempt to make your computer player very smart -- i.e., do something more clever
+than just pick a random legal move?
+-> Yes: Implemented a strategy where the computer looks for threat moves and tries to block
+   the opponent or create winning opportunities instead of just picking a random move.
+
+If so, were you able to accomplish this? Is your computer player as smart as you would like?
+-> Yes: The AI can block immediate threats and create opportunities, reasonablly deciding moves
+   based on the current board state using basic heuristic and hierarchy approach.
+
+How did you determine which piece to play next? Tell us about your "pick next move"
+algorithm
+-> The algorithm prioritizes to check for any immediate winning moves for both itself and the
+   opponent. Then it evaluates potential moves based on a system that considers factors like
+   searching open-ended lines or enough space to build towards a win meanwhile blocking opponent's
+   threats. (e.g., prioritizing movements in order 5 -> 4 -> 3 -> 2 stone consequtives, avoiding
+   edge cases or dead ends like dead 4s or 3s with no open ends)
+
+How often did your computer program beat you, or your friends, or whoever tested it out
+for you?
+-> The AI won approximately 70% of the games played against human testers, indicating a
+   moderate level of challenge.
+
+How easy would it be to make the difficulty level adjustable?
+-> It would be relatively easy to adjust the difficulty level by modifying get_random_move 
+   less aggressive or defensive for lower difficulty levels, while a higher difficulty could
+   involve deeper analysis of potential moves.
+
+How would you improve it in the future?
+-> Future improvements could include implementing a more sophisticated heuristic evaluation
+   function, adding a the AI's ability to plan multiple moves ahead based on best score case
+   scenarios, creating and blocking double threats, and optimizing the move selection process.
